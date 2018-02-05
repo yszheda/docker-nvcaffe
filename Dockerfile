@@ -70,7 +70,7 @@ cd /opt/nccl && make -j install && cd /opt/ && rm -rf /opt/nccl
 # Make caffe
 COPY Makefile.config ${CAFFE_ROOT}/
 RUN cd ${CAFFE_ROOT} && \
-make -j"$(nproc)" && make pycaffe
+make && make pycaffe
 
 
 # Clean
